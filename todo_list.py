@@ -15,7 +15,7 @@ while True:
     userchoice = input('1. Add Tasks   2. View Tasks   3.Delete Tasks   4. Exit')
 
     if userchoice == '1':
-        print('ADD TASKS')
+        print('ADD TASK/S')
         taskname = input('What is the name of your task?')
         
         tasks.append(taskname)
@@ -31,17 +31,17 @@ while True:
         print('Task/s in view!')
         
     elif userchoice == '3':
-        print('DELETE TASKS')
+        print('DELETE TASK/S')
         for task in tasks:
             print(f"[{tasks.index(task) + 1}] - {task}")
         # print(len(tasks))
         deletechoice = int(input("Enter the number of the task you would like to delete:"))
         if deletechoice <= len(tasks):
             tasks.pop(deletechoice - 1)
-            print('Task deleted!')
+            print('DELETE TASK/S')
             for task in tasks:
                 print(f"[{tasks.index(task) + 1}] - {task}")
-            
+            print('task/s deleted!')
 
         else:
             print('incorrect input, the number you chose is out of range try again')
